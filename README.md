@@ -109,4 +109,9 @@
         <td ><b>	Các quy trình đang chạy</b></td>
    </tr>
  </table>
+ 
+  - Ngoài ra, trên linux còn có thể sử dụng các lệnh sau để kiểm tra ứng dụng:
+    - `php -v`: Cung cấp cho bạn phiên bản PHP chạy trên máy chủ ứng dụng web.
+    - `/ etc /`: Passwd  hiển thị tất cả người dùng trên Máy chủ Linux phụ trợ
+    - `/ etc /`: Shadow  hiển thị tất cả mật khẩu đã băm nhưng chỉ khi bạn đang chạy với đặc quyền root.
 <br> 1.4 Một số lệnh để lấy thông tin <a name="11"></a></br>
