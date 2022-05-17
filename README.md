@@ -246,3 +246,12 @@
  - Bây giờ chúng ta thử đăng nhập lại lệnh `../../../../etc/passwd` thì không có kết quả trả về:
 
    ![image](https://user-images.githubusercontent.com/101852647/168807680-077aa818-3556-465f-a8ef-7615a6e9a637.png)
+   
+#### 3. XML external entity injection <a name="1"></a>
+<br> 3.1 Khái niệm <a name="11"></a></br>
+ - XXE sẽ cho các hacker can thiệp vào quá trình xử lý dữ liệu XML của ứng dụng. Các hacker có thể xem các tệp trên hệ thống tệp của máy chủ ứng và tương tác với bất kỳ hệ thống bên ngoài nào mà chính ứng dụng có thể truy cập.
+<br> 3.2 Các kiểu tấn công XXE <a name="11"></a></br>
+ - `Khai thác XXE để truy xuất tệp`: Thực thể bên ngoài được xác định có chứa nội dung của tệp và được trả lại trong phản hồi của ứng dụng.
+ - `Khai thác XXE để thực hiện các cuộc tấn công SSRF`: Thực thể bên ngoài được xác định dựa trên URL đến hệ thống back-end.
+ - `Khai thác dữ liệu ngoài luồng dữ liệu exfiltrate XXE mù`: nơi dữ liệu nhạy cảm được truyền từ máy chủ ứng dụng đến hệ thống mà kẻ tấn công kiểm soát.
+ - `Khai thác Blind XXE để truy xuất dữ liệu thông qua thông báo lỗi`: nơi kẻ tấn công có thể kích hoạt thông báo lỗi phân tích cú pháp chứa dữ liệu nhạy cảm.
