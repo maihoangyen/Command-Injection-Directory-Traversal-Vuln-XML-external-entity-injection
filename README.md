@@ -168,10 +168,27 @@
 <br> 2.2 mô phỏng code lỗ hổng Directory Traversal <a name="11"></a></br>
 
 <br> 2.3 Khai thác lỗ hổng Directory Traversal <a name="11"></a></br>
- - Đầu tiên chúng ta sẽ sử dụng lệnh `../../../../etc/passwd` để hiển thị nội dung trong `/etc/passwd`:
+ - Đầu tiên chúng ta sẽ sử dụng lệnh `../../../../etc/passwd` để hiển thị thông tin về tất cả tài khoản của người dùng:
 
    ![image](https://user-images.githubusercontent.com/101852647/168804040-6e21b18f-2743-42b5-af2a-5bc6279ca37a.png)
 
- - Tiếp theo có thể sử dụng lệnh `../../../../etc/group` để :
+ - Tiếp theo có thể sử dụng lệnh `../../../../etc/group` để hiển thị các nhóm mà người dùng:
 
    ![image](https://user-images.githubusercontent.com/101852647/168804301-08a5a764-180c-4829-9388-3ef0ab75e265.png)
+
+ - Chúng ta sẽ sử dụng lệnh `../../../../etc/profile` để hiển thị các biến mặc định cho người dùng:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168804593-4587d409-190b-4c54-9ed0-0613650f8d51.png)
+
+ - Chúng ta cũng có thể sử dụng lệnh `../../../../etc/issue` để hiển thị thông báo trước khi đăng nhập:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168804975-41a08850-afe4-49ac-b73f-4a59a4134f72.png)
+   
+ - Có thể sử dụng lệnh `../../../../proc/version` để hiển thị phiên bản của Linux đang được sử dụng:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168806098-63d80ae1-dfa7-4f96-adf0-c942d646bb87.png)
+
+ - có thể sử dụng lệnh `../../../../proc / cpuinfo` để hiển thị thông tin bộ xử lý:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168806364-ac869f81-8fe0-49e1-964b-e7439e949ef1.png)
+
