@@ -166,6 +166,13 @@
  - Directory Traversal cho phép đọc các thư mục hoặc là các file không mong muốn trên server. Nó dẫn đến việc bị lộ thông tin nhạy cảm của ứng dụng như thông tin đăng nhập , một số file hoặc thư mục của hệ điều hành. 
 
 <br> 2.2 mô phỏng code lỗ hổng Directory Traversal <a name="11"></a></br>
+ - Đây là code lỗi Directory Traversal:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168809005-4a602f4c-19a9-4c29-a826-64c5636079b0.png)
+
+ - Đây là giao diện web:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168809150-6feb9f3d-2e45-4ec2-9471-53e361188fea.png)
 
 <br> 2.3 Khai thác lỗ hổng Directory Traversal <a name="11"></a></br>
  - Đầu tiên chúng ta sẽ sử dụng lệnh `../../../../etc/passwd` để hiển thị thông tin về tất cả tài khoản của người dùng:
@@ -191,4 +198,12 @@
  - có thể sử dụng lệnh `../../../../proc / cpuinfo` để hiển thị thông tin bộ xử lý:
 
    ![image](https://user-images.githubusercontent.com/101852647/168806364-ac869f81-8fe0-49e1-964b-e7439e949ef1.png)
+ 
+<br> 2.4 code khắc phục lỗ hổng Directory Traversal <a name="11"></a></br>
+ - Đây là code khắc phục:
 
+   ![image](https://user-images.githubusercontent.com/101852647/168808665-72713f29-7ff3-410d-9d43-73b4549b2b4a.png)
+
+ - Bây giờ chúng ta thử đăng nhập lại lệnh `../../../../etc/passwd` thì không có kết quả trả về:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168807680-077aa818-3556-465f-a8ef-7615a6e9a637.png)
