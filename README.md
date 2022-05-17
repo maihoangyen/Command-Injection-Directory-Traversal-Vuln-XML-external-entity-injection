@@ -57,8 +57,7 @@
 ### Nội dung báo cáo 
 #### 1. Command Injection <a name="1"></a>
 <br> 1.1 Khái niệm Command Injection <a name="11"></a></br>
- - Command Injection là đưa các lệnh của hệ điều hành được thực thi thông qua một ứng dụng web.
-  - 
+ - Command Injection là đưa các lệnh của hệ điều hành được thực thi thông qua một ứng dụng web. 
   
  <br> 1.2 Sự khác nhau giữa code injection và command injection <a name="11"></a></br>
   <table align="center">
