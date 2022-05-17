@@ -76,6 +76,7 @@
  </table>
  
  <br> 1.3 Một số lệnh để lấy thông tin <a name="11"></a></br>
+  - Để kiểm tra ứng dụng có lỗ hổng chèn lệnh hay không thì sử dụng siêu ký tự cho phép các lệnh được xâu chuỗi lại với nhau. Các dấu phân tách lệnh sau hoạt động trên cả hệ thống dựa trên Windows và Unix: &, &&, ||, |, ;, ', #,...
   <table align="center">
    <tr>
         <td align="center" ><b>Windows</b></td>
@@ -108,3 +109,4 @@
         <td ><b>	Các quy trình đang chạy</b></td>
    </tr>
  </table>
+<br> 1.4 Một số lệnh để lấy thông tin <a name="11"></a></br>
