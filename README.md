@@ -163,8 +163,38 @@
 
 #### 2. Directory Traversal  <a name="1"></a>
 <br> 2.1 Khái niệm <a name="11"></a></br>
- - Directory Traversal cho phép đọc các thư mục hoặc là các file không mong muốn trên server. Nó dẫn đến việc bị lộ thông tin nhạy cảm của ứng dụng như thông tin đăng nhập , một số file hoặc thư mục của hệ điều hành. 
-
+ - Directory Traversal cho phép đọc các thư mục hoặc là các file không mong muốn trên server. Nó dẫn đến việc bị lộ thông tin nhạy cảm của ứng dụng như thông tin đăng nhập , một số file hoặc thư mục của hệ điều hành.
+ - Một số tệp hệ thống có thể bị tấn công: 
+<table align="center">
+   <tr>
+        <td align="center" ><b>Tên tệp</b></td>
+        <td align="center"><b>Nội dung</b></td>
+   </tr>
+   <tr>
+        <td ><b>/etc/passwd</b></td>
+        <td ><b>Chứa thông tin về tất cả tài khoản của người dùng</b></td> 
+   </tr>
+   <tr>
+        <td ><b>	/etc/group</b></td>
+        <td ><b>	Chứa các nhóm mà người dùng</b></td> 
+   </tr>
+   <tr>
+        <td ><b>	/etc/profile</b></td>
+        <td ><b>Chứa các biến mặc định cho người dùng</b></td>
+   </tr>
+   <tr>
+        <td ><b>	/etc/issue</b></td>
+        <td ><b>	Chứa thông báo hiển thị trước khi đăng nhập</b></td>
+   </tr>
+   <tr>
+        <td ><b>	/proc/version</b></td>
+        <td ><b>	Chứa phiên bản Linux đang được sử dụng</b></td>
+   </tr>
+   <tr>
+        <td ><b>	/proc/cpuinfo</b></td>
+        <td ><b>	Chứa thông tin bộ xử lý</b></td>
+   </tr>
+ </table>
 <br> 2.2 mô phỏng code lỗ hổng Directory Traversal <a name="11"></a></br>
  - Đây là code lỗi Directory Traversal:
 
