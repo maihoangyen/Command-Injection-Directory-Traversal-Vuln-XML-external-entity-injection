@@ -67,11 +67,11 @@
         <td align="center"><b>Khác nhau</b></td>
    </tr>
    <tr>
-        <td align="center" ><b>code injection</b></td>
-        <td align="center"><b>cho phép hacker chèn mã riêng, sau đó được ứng dụng thực thi</b></td>
+        <td><b>code injection</b></td>
+        <td><b>cho phép hacker chèn mã riêng, sau đó được ứng dụng thực thi</b></td>
    </tr>
    <tr>
-        <td ><b></b>command injection</td>
+        <td ><b></b>command injection</b></td>
         <td ><b>Cho phép mở rộng chức năng mặc định của ứng dụng, thực thi các lệnh hệ thống mà không cần phải chèn mã.</b></td> 
    </tr>
  </table>
