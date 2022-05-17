@@ -57,8 +57,20 @@
 ### Nội dung báo cáo 
 #### 1. Command Injection <a name="1"></a>
 <br> 1.1 Khái niệm Command Injection <a name="11"></a></br>
-  - Command Injection là kiểu tấn công cho phép mở rộng chức năng mặc định của ứng dụng, thực thi các lệnh hệ thống mà không cần phải chèn mã.
+ - Command Injection là đưa các lệnh của hệ điều hành được thực thi thông qua một ứng dụng web.
+  - 
   
+ <br> 1.2 Sự khác nhau giữa code injection và command injection <a name="11"></a></br>
+  <table align="center">
+   <tr>
+        <td align="center" ><b>code injection</b></td>
+        <td align="center"><b>command injection</b></td>
+            </tr>
+   <tr>
+        <td ><b>cho phép hacker chèn mã riêng, sau đó được ứng dụng thực thi</b></td>
+        <td ><b>Cho phép mở rộng chức năng mặc định của ứng dụng, thực thi các lệnh hệ thống mà không cần phải chèn mã.</b></td> 
+   </tr>
+ </table>
  <br> 1.2 Một số lệnh để lấy thông tin <a name="11"></a></br>
   <table align="center">
    <tr>
