@@ -112,6 +112,13 @@
  
   - Ngoài ra, trên linux còn có thể sử dụng các lệnh sau để kiểm tra ứng dụng:
     - `php -v`: Cung cấp cho bạn phiên bản PHP chạy trên máy chủ ứng dụng web.
-    - `/ etc /`: Passwd  hiển thị tất cả người dùng trên Máy chủ Linux phụ trợ
-    - `/ etc /`: Shadow  hiển thị tất cả mật khẩu đã băm nhưng chỉ khi bạn đang chạy với đặc quyền root.
-<br> 1.4 Một số lệnh để lấy thông tin <a name="11"></a></br>
+    - `/etc/passwd`: Hiển thị tất cả người dùng trên Máy chủ Linux phụ trợ
+    - `/etc/shadow: Hiển thị tất cả mật khẩu đã băm nhưng chỉ khi bạn đang chạy với đặc quyền root.
+    
+<br> 1.4 Mô phỏng code command injection <a name="11"></a></br>
+ - Đây là code lỗ hổng:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168734352-b4d9b93b-ac4b-4b7f-9c3a-1b269a6fcfc3.png)
+
+<br> 1.5 Khai thác lỗ hổng và thực thi reverse shell <a name="11"></a></br>
+ - 
