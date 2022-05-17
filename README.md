@@ -168,3 +168,10 @@
 <br> 2.2 mô phỏng code lỗ hổng Directory Traversal <a name="11"></a></br>
 
 <br> 2.3 Khai thác lỗ hổng Directory Traversal <a name="11"></a></br>
+ - Đầu tiên chúng ta sẽ sử dụng lệnh `../../../../etc/passwd` để hiển thị nội dung trong `/etc/passwd`:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168804040-6e21b18f-2743-42b5-af2a-5bc6279ca37a.png)
+
+ - Tiếp theo có thể sử dụng lệnh `../../../../etc/group` để :
+
+   ![image](https://user-images.githubusercontent.com/101852647/168804301-08a5a764-180c-4829-9388-3ef0ab75e265.png)
