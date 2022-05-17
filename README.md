@@ -161,4 +161,8 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168760822-0a14488c-0e86-4143-91b1-7f595d0b1681.png)
 
+#### 2. Directory Traversal  <a name="1"></a>
+<br> 2.1 Khái niệm <a name="11"></a></br>
+ - Directory Traversal cho phép đọc các thư mục hoặc là các file không mong muốn trên server. Nó dẫn đến việc bị lộ thông tin nhạy cảm của ứng dụng như thông tin đăng nhập , một số file hoặc thư mục của hệ điều hành. 
 
+<br> 2.2 Khái niệm <a name="11"></a></br>
