@@ -74,7 +74,8 @@
         <td ><b>Cho phép mở rộng chức năng mặc định của ứng dụng, thực thi các lệnh hệ thống mà không cần phải chèn mã.</b></td> 
    </tr>
  </table>
- <br> 1.2 Một số lệnh để lấy thông tin <a name="11"></a></br>
+ 
+ <br> 1.3 Một số lệnh để lấy thông tin <a name="11"></a></br>
   <table align="center">
    <tr>
         <td align="center" ><b>Windows</b></td>
