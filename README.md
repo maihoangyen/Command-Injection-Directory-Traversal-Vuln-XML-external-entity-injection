@@ -121,4 +121,27 @@
    ![image](https://user-images.githubusercontent.com/101852647/168734352-b4d9b93b-ac4b-4b7f-9c3a-1b269a6fcfc3.png)
 
 <br> 1.5 Khai thác lỗ hổng và thực thi reverse shell <a name="11"></a></br>
- - 
+ - Đây là giao diện web chứa lỗ hổng command injetion:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168750779-77522d7c-4aa3-4ab5-b154-98b85a743f7a.png)
+   
+ - Bây giờ thử `ping 8.8.8.8` để kiểm tra kết nối:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168751764-78be9087-11ca-4a9e-9a03-148eeff242cb.png)
+
+ - Tiếp theo chúng ta kiểm tra lỗ hổng bằng cách thử nhập `8.8.8.8 && ls` và nó đã hiển thử thư mục cho chúng ta:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168752189-dbcf99eb-2c07-4063-a866-22829a22ae80.png)
+
+ - Chúng ta cũng có thể kiểm tra tên người dùng hiện tại bằng lệnh `8.8.8.8 && whoami`:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168752606-54908571-199b-41c4-813f-66b892248bc1.png)
+
+ - Hoặc chúng ta có thể hiển thị hệ điều hành bằng lệnh `8.8.8.8 && uname -a`:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168752979-70a354dd-80d9-4389-9b10-1743aa5d7c69.png)
+
+ - Chúng ta cũng có thể xem nội dung trong tệp `/etc/passwd` bằng lệnh ` 8.8.8.8 && cat/etc/passwd`:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168753366-936ebc40-beb8-4eaa-9b11-6d12bd4276ca.png)
+
