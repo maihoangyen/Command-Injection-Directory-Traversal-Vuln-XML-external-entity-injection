@@ -161,6 +161,15 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168760822-0a14488c-0e86-4143-91b1-7f595d0b1681.png)
 
+<br> 1.6 Code khắc phục lỗi command injection <a name="11"></a></br>
+ - Đây là code khắc phục lỗ hổng:
+ 
+  ![image](https://user-images.githubusercontent.com/101852647/168812850-421538bc-d30d-409c-9305-3fe569530478.png)
+
+ - Sau khi được khắc phục bây giờ chúng ta thử nhập lại lệnh `8.8.8.8 && ls` thì đã bị chặn:
+
+   ![image](https://user-images.githubusercontent.com/101852647/168814268-26937100-5ec3-4c33-b4a3-02f4fe76fa41.png)
+
 #### 2. Directory Traversal  <a name="1"></a>
 <br> 2.1 Khái niệm <a name="11"></a></br>
  - Directory Traversal cho phép đọc các thư mục hoặc là các file không mong muốn trên server. Nó dẫn đến việc bị lộ thông tin nhạy cảm của ứng dụng như thông tin đăng nhập , một số file hoặc thư mục của hệ điều hành.
