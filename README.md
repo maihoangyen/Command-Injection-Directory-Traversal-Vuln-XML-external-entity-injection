@@ -165,4 +165,6 @@
 <br> 2.1 Khái niệm <a name="11"></a></br>
  - Directory Traversal cho phép đọc các thư mục hoặc là các file không mong muốn trên server. Nó dẫn đến việc bị lộ thông tin nhạy cảm của ứng dụng như thông tin đăng nhập , một số file hoặc thư mục của hệ điều hành. 
 
-<br> 2.2 Khái niệm <a name="11"></a></br>
+<br> 2.2 mô phỏng code lỗ hổng Directory Traversal <a name="11"></a></br>
+
+<br> 2.3 Khai thác lỗ hổng Directory Traversal <a name="11"></a></br>
