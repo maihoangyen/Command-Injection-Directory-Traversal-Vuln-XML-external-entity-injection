@@ -4,62 +4,46 @@
  ### MỤC LỤC
  1. [Command Injection](#1)
  
-     1.1 [Khái niệm XSS](#11)
+     1.1 [Khái niệm Command Injection](#11)
       
-     1.2 [Các kiểu khai thác XSS](#12)
+     1.2 [Sự khác nhau giữa code injection và command injection](#12)
  
-     1.3 [Khi nào thì XSS sẽ xảy ra](#13)
+     1.3 [Một số lệnh để lấy thông tin](#13)
 
-     1.4 [Cách khắc phục XSS](#14)
+     1.4 [Mô phỏng code command injection](#14)
       
-     1.5 [Cách sử dụng XSS để đánh cắp cookies người dùng](#15)
+     1.5 [ Khai thác lỗ hổng và thực thi reverse shell ](#15)
  
-     1.6 [Điều chỉnh các tham số header](#16)
-
-     1.7 [Mô phỏng XSS đánh cắp phiên khi Login vào trang web. Cookie sẽ được điều hướng về 1 host dựng sẵn](#17)
-      
-     1.8 [Mô phỏng code XSS](#18)
- 
-     1.9 [Khắc phục code lỗi XSS](#19)
+     1.6 [Code khắc phục lỗi command injection](#16)
      
- 2. [CSRF](#2) 
+ 2. [Directory Traversal](#2) 
 
-     2.1 [Khái niệm CSRF](#21)
+     2.1 [Khái niệm Directory Traversal](#21)
       
-     2.2 [Cách thức tấn công CSRF](#22)
+     2.2 [mô phỏng code lỗ hổng Directory Traversal](#22)
  
-     2.3 [Mô phỏng code lỗi CSRF](#23)
+     2.3 [Khai thác lỗ hổng Directory Traversal](#23)
 
-     2.4 [Khắc phục code lỗi CSRF](#24)
+     2.4 [code khắc phục lỗ hổng Directory Traversal](#24)
        
- 3. [LFI](#3)
+ 3. [XML external entity injection](#3)
 
-     3.1 [Khái niệm LFI](#31)
+     3.1 [Khái niệm XXE](#31)
       
-     3.2 [Cách thức tấn công LFI](#32)
+     3.2 [Các kiểu tấn công XXE](#32)
  
-     3.3 [Mô phỏng code lỗi LFI](#33)
+     3.3 [Mô phỏng code lỗi XXE](#33)
 
-     3.4 [Khắc phục code lỗi LFI](#34)
+     3.4 [Khai thác XXE](#34)
 
-  4. [RFI](#4)
-
-     4.1 [Khái niệm RFI](#41)
-      
-     4.2 [Cách thức tấn công RFI](#42)
- 
-     4.3 [Mô phỏng code lỗi RFI](#43)
-
-     4.4 [Khắc phục code lỗi RFI](#44)
- 
- 5. [Các hàm đã sử dụng](#5)
+     3.5 [Khắc phục lỗi XXE](#34)
  
 ### Nội dung báo cáo 
 #### 1. Command Injection <a name="1"></a>
 <br> 1.1 Khái niệm Command Injection <a name="11"></a></br>
  - Command Injection là đưa các lệnh của hệ điều hành được thực thi thông qua một ứng dụng web. 
   
- <br> 1.2 Sự khác nhau giữa code injection và command injection <a name="11"></a></br>
+ <br> 1.2 Sự khác nhau giữa code injection và command injection <a name="12"></a></br>
   <table align="center">
    <tr>
         <td align="center" ><b>Tên</b></td>
@@ -75,7 +59,7 @@
    </tr>
  </table>
  
- <br> 1.3 Một số lệnh để lấy thông tin <a name="11"></a></br>
+ <br> 1.3 Một số lệnh để lấy thông tin <a name="13"></a></br>
   - Để kiểm tra ứng dụng có lỗ hổng chèn lệnh hay không thì sử dụng siêu ký tự cho phép các lệnh được xâu chuỗi lại với nhau. Các dấu phân tách lệnh sau hoạt động trên cả hệ thống dựa trên Windows và Unix: &, &&, ||, |, ;, ', #,...
   <table align="center">
    <tr>
@@ -115,12 +99,12 @@
     - `/etc/passwd`: Hiển thị tất cả người dùng trên Máy chủ Linux phụ trợ
     - `/etc/shadow: Hiển thị tất cả mật khẩu đã băm nhưng chỉ khi bạn đang chạy với đặc quyền root.
     
-<br> 1.4 Mô phỏng code command injection <a name="11"></a></br>
+<br> 1.4 Mô phỏng code command injection <a name="14"></a></br>
  - Đây là code lỗ hổng:
 
    ![image](https://user-images.githubusercontent.com/101852647/168734352-b4d9b93b-ac4b-4b7f-9c3a-1b269a6fcfc3.png)
 
-<br> 1.5 Khai thác lỗ hổng và thực thi reverse shell <a name="11"></a></br>
+<br> 1.5 Khai thác lỗ hổng và thực thi reverse shell <a name="15"></a></br>
  - Đây là giao diện web chứa lỗ hổng command injetion:
 
    ![image](https://user-images.githubusercontent.com/101852647/168750779-77522d7c-4aa3-4ab5-b154-98b85a743f7a.png)
@@ -161,7 +145,7 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168760822-0a14488c-0e86-4143-91b1-7f595d0b1681.png)
 
-<br> 1.6 Code khắc phục lỗi command injection <a name="11"></a></br>
+<br> 1.6 Code khắc phục lỗi command injection <a name="16"></a></br>
  - Đây là code khắc phục lỗ hổng:
  
   ![image](https://user-images.githubusercontent.com/101852647/168812850-421538bc-d30d-409c-9305-3fe569530478.png)
@@ -170,8 +154,8 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168814268-26937100-5ec3-4c33-b4a3-02f4fe76fa41.png)
 
-#### 2. Directory Traversal  <a name="1"></a>
-<br> 2.1 Khái niệm <a name="11"></a></br>
+#### 2. Directory Traversal  <a name="2"></a>
+<br> 2.1 Khái niệm <a name="21"></a></br>
  - Directory Traversal cho phép đọc các thư mục hoặc là các file không mong muốn trên server. Nó dẫn đến việc bị lộ thông tin nhạy cảm của ứng dụng như thông tin đăng nhập , một số file hoặc thư mục của hệ điều hành.
  - Một số tệp hệ thống có thể bị tấn công: 
 <table align="center">
@@ -204,7 +188,7 @@
         <td ><b>	Chứa thông tin bộ xử lý</b></td>
    </tr>
  </table>
-<br> 2.2 mô phỏng code lỗ hổng Directory Traversal <a name="11"></a></br>
+<br> 2.2 mô phỏng code lỗ hổng Directory Traversal <a name="22"></a></br>
  - Đây là code lỗi Directory Traversal:
 
    ![image](https://user-images.githubusercontent.com/101852647/168809005-4a602f4c-19a9-4c29-a826-64c5636079b0.png)
@@ -213,7 +197,7 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168809150-6feb9f3d-2e45-4ec2-9471-53e361188fea.png)
 
-<br> 2.3 Khai thác lỗ hổng Directory Traversal <a name="11"></a></br>
+<br> 2.3 Khai thác lỗ hổng Directory Traversal <a name="23"></a></br>
  - Đầu tiên chúng ta sẽ sử dụng lệnh `../../../../etc/passwd` để hiển thị thông tin về tất cả tài khoản của người dùng:
 
    ![image](https://user-images.githubusercontent.com/101852647/168804040-6e21b18f-2743-42b5-af2a-5bc6279ca37a.png)
@@ -238,7 +222,7 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168806364-ac869f81-8fe0-49e1-964b-e7439e949ef1.png)
  
-<br> 2.4 code khắc phục lỗ hổng Directory Traversal <a name="11"></a></br>
+<br> 2.4 code khắc phục lỗ hổng Directory Traversal <a name="24"></a></br>
  - Đây là code khắc phục:
 
    ![image](https://user-images.githubusercontent.com/101852647/168808665-72713f29-7ff3-410d-9d43-73b4549b2b4a.png)
@@ -247,11 +231,11 @@
 
    ![image](https://user-images.githubusercontent.com/101852647/168807680-077aa818-3556-465f-a8ef-7615a6e9a637.png)
    
-#### 3. XML external entity injection <a name="1"></a>
-<br> 3.1 Khái niệm <a name="11"></a></br>
+#### 3. XML external entity injection <a name="3"></a>
+<br> 3.1 Khái niệm <a name="31"></a></br>
  - XXE là lỗ hổng cho phép các hacker can thiệp vào quá trình xử lý dữ liệu XML của ứng dụng. Các hacker có thể xem các tệp trên hệ thống tệp của máy chủ ứng và tương tác với bất kỳ hệ thống bên ngoài nào mà chính ứng dụng có thể truy cập.
  
-<br> 3.2 Các kiểu tấn công XXE <a name="11"></a></br>
+<br> 3.2 Các kiểu tấn công XXE <a name="32"></a></br>
  - `Khai thác XXE để truy xuất tệp`: Thực thể bên ngoài được xác định có chứa nội dung của tệp và được trả lại trong phản hồi của ứng dụng.
     - Ví dụ: 
     
@@ -280,9 +264,14 @@
              %eval;
              %error;`
               
-<br> 3.2 mô phỏng code XXE <a name="11"></a></br>
+<br> 3.3 mô phỏng code XXE <a name="33"></a></br>
+ - Đây là code lỗ XXE:
 
-<br> 3.4 Khai thác XXE <a name="11"></a></br>
+  ![image](https://user-images.githubusercontent.com/101852647/169962628-336a1585-f452-4e01-9989-af9b0c866c84.png)
+
+  ![image](https://user-images.githubusercontent.com/101852647/169962574-2713776c-3c88-4ba5-8928-af28b4aab1a3.png)
+
+<br> 3.4 Khai thác XXE <a name="34"></a></br>
  - Đây là trang web có lỗi XXE:
 
    ![image](https://user-images.githubusercontent.com/101852647/169953921-67af87ac-79b0-4be8-8150-881092ed5db0.png)
@@ -291,4 +280,12 @@
  
    ![image](https://user-images.githubusercontent.com/101852647/169954434-21924bfe-e84a-42f1-9a72-d7a32acb43f1.png)
 
-  <br> 3.4 Code khắc phục XXE <a name="11"></a></br>
+<br> 3.5 Code khắc phục XXE <a name="35"></a></br>
+ - Đây là code khắc phục. Chúng ta sẽ sử dụng hàm `libxml_disable_entity_loader(true)` để có thể khắc phục. Hàm này mặc định là false có nghĩa là nó cho phép tải các thực thể bên ngoài còn true thì sẽ ngược lại.
+
+   ![image](https://user-images.githubusercontent.com/101852647/169962683-9c7de6c1-c619-4cff-b778-f61ac3027584.png)
+
+ - Sau khi khắc phục.
+
+   ![image](https://user-images.githubusercontent.com/101852647/169961089-cef3b4b6-6336-4700-94a2-ae815dd1ed45.png)
+
