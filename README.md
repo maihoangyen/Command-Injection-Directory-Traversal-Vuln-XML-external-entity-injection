@@ -250,8 +250,25 @@
 #### 3. XML external entity injection <a name="1"></a>
 <br> 3.1 Khái niệm <a name="11"></a></br>
  - XXE là lỗ hổng cho phép các hacker can thiệp vào quá trình xử lý dữ liệu XML của ứng dụng. Các hacker có thể xem các tệp trên hệ thống tệp của máy chủ ứng và tương tác với bất kỳ hệ thống bên ngoài nào mà chính ứng dụng có thể truy cập.
+ 
 <br> 3.2 Các kiểu tấn công XXE <a name="11"></a></br>
  - `Khai thác XXE để truy xuất tệp`: Thực thể bên ngoài được xác định có chứa nội dung của tệp và được trả lại trong phản hồi của ứng dụng.
+    - Ví dụ: 
+              `<?xml version="1.0" encoding="UTF-8"?>
+              <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+              <stockCheck><productId>&xxe;</productId></stockCheck>`
+              
  - `Khai thác XXE để thực hiện các cuộc tấn công SSRF`: Thực thể bên ngoài được xác định dựa trên URL đến hệ thống back-end.
  - `Khai thác Blind XXE exfiltrate dữ liệu ngoài băng tần`: nơi dữ liệu nhạy cảm được truyền từ máy chủ ứng dụng đến hệ thống mà kẻ tấn công kiểm soát.
  - `Khai thác Blind XXE để truy xuất dữ liệu thông qua thông báo lỗi`: nơi kẻ tấn công có thể kích hoạt thông báo lỗi phân tích cú pháp chứa dữ liệu nhạy cảm.
+<br> 3.2 Các kiểu tấn công XXE <a name="11"></a></br>
+
+<br> 3.4 Khai thác XXE <a name="11"></a></br>
+ - Đây là trang web có lỗi XXE:
+
+   ![image](https://user-images.githubusercontent.com/101852647/169953921-67af87ac-79b0-4be8-8150-881092ed5db0.png)
+  
+ - Chúng ta sẽ sử dụng `<!DOCTYPE foo [ <!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd">]>` để khai thác tệp `etc/passwd`
+ 
+   ![image](https://user-images.githubusercontent.com/101852647/169954434-21924bfe-e84a-42f1-9a72-d7a32acb43f1.png)
+
